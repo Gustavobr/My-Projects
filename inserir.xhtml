@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <div id="cad_carro" align="center">
+            <p:panel header="Cadastro de Carro" menuTitle="Cadastro">  
+                <f:facet name="form" transient="Cadastro"></f:facet>
+                <b:form class="form-group" id="cad_carro">
+                    <p:fieldset legend="Cadastro de Carro"/>  
+                    <b:label class="alert-info" text="ID:"></b:label> <p:inputText id="id" size="5" value="#{carroDAO.id_carro}" 
+                                                                                   required="true" requiredMessage="Favor inserir id do carro"></p:inputText>
+                    <br/>
+                    <b:label class="alert-info" text="MARCA:"></b:label> <p:inputText id="marca" value="#{carroDAO.marca}" size="25" 
+                                                                                      required="true" requiredMessage="Favor inserir marca do carro"></p:inputText>
+                    <br/>
+                    <b:label class="alert-info" text="MODELO:"></b:label> <p:inputText id="modelo" value="#{carroDAO.modelo}" size="25"
+                                                                                       required="true" requiredMessage="Favor inserir modelo do carro"></p:inputText>   
+                    <br/>
+                    <b:commandButton class="alert-success" value="Gravar" action="#{carroDAO.adicionarCarro()}"></b:commandButton>
+
+                </b:form>
+            </p:panel> 
+
+        </div>
+    </h:body>
+</html>
+

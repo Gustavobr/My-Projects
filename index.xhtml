@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:b="http://bootsfaces.net/ui">
+    <h:head>
+        <title>SIV_CAR</title>
+
+    </h:head>
+    <h:body>
+        <script src="../web/WEB-INF/Boostrap/bootstrap-grid.css"/>
+        <b:jumbotron styleClass="container" transient="Teste">
+            <p:panel header="Siv_Car - Controller" toggleTitle="Controller" menuTitle="controller">    
+                <p:panelGrid styleClass="container" columns="3">
+                    <div id="logo">  
+                        <img width="60" height="80" src="WEB-INF/logo.jpg" alt="logo"/>®
+                    </div>    
+                        <div id="menu" style="display:  inline;">
+                            <b:form>  
+                                <b:commandButton  value="Inserir carro" style="display: inline; font-style: italic;" action="/inserir.xhtml" />
+                                <b:commandButton  value="Remover carro" style="display: inline;  font-style: italic; "  />
+                                <b:commandButton  value="Editar carro" style="display: inline; font-style: italic;"  />
+                            </b:form>    
+                        </div>
+                </p:panelGrid>
+            </p:panel>
+        </b:jumbotron>
+    </h:body>
+</html>
+
